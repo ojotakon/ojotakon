@@ -55,4 +55,4 @@ with col2:
 
   st.pyplot(fig)
   
-st.caption('Copyright © Syerlina Afitia 2024')
+st.caption('Copyright © Syerlina Afitia, 210322607252, 2024')
