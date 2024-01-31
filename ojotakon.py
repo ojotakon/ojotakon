@@ -54,3 +54,5 @@ with col2:
   ax.tick_params(axis='x', labelsize=15)
 
   st.pyplot(fig)
+  
+st.caption('Copyright © Syerlina Afitia 2024')
