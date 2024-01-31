@@ -10,7 +10,7 @@ x = np.linspace(-2 * np.pi, 2 * np.pi, 1000)
 y = np.sin(x)
 z = np.cos(x)
 
-fig, ax = plt.subplot(figsize=(16, 8))
+fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(x, y, label='sin(x)', color='b')
 ax.plot(x, y, label='cos(x)', color='g')
 ax.set_ylabel("")
