@@ -16,7 +16,7 @@ ax.plot(x, y, label='cos(x)', color='g')
 ax.set_ylabel("")
 ax.set_xlabel("x")
 ax.tick_params(axis='y', labelsize=20)
-ax.set_xlicklabels(ax.get_sticklabels(), rotation=30, ha='right')
+ax.set_xticklabels(ax.get(xticklabels(), rotation=30, ha='right')
 ax.tick_params(axis='x', labelsize=15)
 
 st.pyplot(fig)
