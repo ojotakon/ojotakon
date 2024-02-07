@@ -28,4 +28,4 @@ with c4:
     st.write('hasil ')
     st.write('= ', x*y)
     
-st.caption('Copyright © Syerlina Afitia 2024,)
+st.caption('Copyright © Syerlina Afitia 2024')
