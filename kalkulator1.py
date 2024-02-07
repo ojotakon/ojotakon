@@ -21,7 +21,7 @@ with c4:
   if(operator == '-'):
     st.write('= ', x-y)
   if(operator == ':'):
-    st.write('= ', x:y)
+    st.write('= ', x/y)
   if(operator == 'x'):
     st.write('= ', x*y)
   
