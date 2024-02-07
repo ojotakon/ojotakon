@@ -16,16 +16,13 @@ with c3:
   y = st.number_input('y ', value=0)
 with c4:
   if(operan=='+'):
-    st.write('hasil ')
     st.write('= ', x+y) 
   if(operan=='-'):
-    st.write('hasil ')
     st.write('= ', x-y)
   if(operan==':'):
-    st.write('hasil ')
     st.write('= ', x/y)
   if(operan=='x'):
-    st.write('hasil ')
     st.write('= ', x*y)
+  st.write('hasil ')
 
 st.write(x, ' ', operan, y, ' ', '=', ' ')
