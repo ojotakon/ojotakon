@@ -11,7 +11,7 @@ with c1:
 with c2:
     operan = st.selectbox(
       'Operan',
-      ('+', '-', ':', 'x'),key='k1'
+      ('+', '-', ':', 'x'),key='k1')
 with c3:
   y = st.number_input('y ', value=0)
 with c4:
