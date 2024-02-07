@@ -16,6 +16,5 @@ with c3:
   y = st.number_input('y ', value=0)
 with c4:
   z = st.number_input('hasil ', value=0)
-  st.write('=>: ')
   
 st.write(x, ' ', operan, y, ' ', '=', ' ')
