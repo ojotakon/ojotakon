@@ -23,5 +23,5 @@ with c4:
     st.write('= ', x/y)
   if(operan=='x'):
     st.write('= ', x*y)
-  z = st.print ()
+
 st.write(x, ' ', operan, y, ' ', '=', ' ')
