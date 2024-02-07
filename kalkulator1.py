@@ -23,6 +23,7 @@ with c4:
     st.write('= ', x/y)
   if(operan=='x'):
     st.write('= ', x*y)
-  st.write('hasil ')
+  
+  z = st.write('hasil ')
 
 st.write(x, ' ', operan, y, ' ', '=', ' ')
