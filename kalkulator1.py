@@ -15,7 +15,6 @@ with c2:
 with c3:
   y = st.number_input('y ', value=0)
 with c4:
-  z = st.number_input('z ')
   if(operan=='+'):
     st.write('= ', x+y)
   if(operan=='-'):
@@ -24,5 +23,6 @@ with c4:
     st.write('= ', x/y)
   if(operan=='x'):
     st.write('= ', x*y)
+ z = st.write('kolom ')
 
 st.write(x, ' ', operan, y, ' ', '=', ' ')
