@@ -18,4 +18,4 @@ with c4:
   z = st.number_input('hasil ', value=0)
   st.write('=>: ')
   
-st.write(x, ' ', operan, '=', ' ')
+st.write(x, ' ', operan, y, ' ', '=', ' ')
