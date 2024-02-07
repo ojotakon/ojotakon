@@ -15,7 +15,7 @@ with c2:
 with c3:
   y = st.number_input('y ', value=0)
 with c4:
-  z = st.number_input('z ')
+  z = st.number_input('z ', value=0)
   if(operan=='+'):
     st.write('= ', x+y)
   if(operan=='-'):
