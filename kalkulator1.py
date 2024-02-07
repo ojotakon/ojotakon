@@ -11,7 +11,7 @@ with c1:
 with c2:
     operan = st.selectbox(
       'Operan',
-      ('+', '-', '/', 'x')
+      ('+', '-', ':', 'x')
 with c3:
   y = st.number_input('Variabel kedua ', value=100)
 with c4:
