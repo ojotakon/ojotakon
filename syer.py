@@ -8,7 +8,7 @@ y = st.slider('Set nilai',0.0, 100.0, 25.0)
 st.write('nilai y:', y)
 
 t = np.linspace(x(0)*np.pi,x(1)*np.pi,100)
-u = np.sint(t)
+u = np.sin(t)
 #st.write('nilai t:', t)
 
 fig, ax = plt.subplots(figsize=(16, 8))
