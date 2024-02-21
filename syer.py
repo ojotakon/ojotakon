@@ -51,7 +51,7 @@ def f(x):
     a = 19
     b = 25
     c = 5
-    return a*x*x + b*x - c
+    return a*x**2 + b*x - c
 
 # Metode trapesium untuk integral
 def trapezoidal_rule(f, a, b, n=100):
@@ -61,10 +61,10 @@ def trapezoidal_rule(f, a, b, n=100):
     s = 0.5 * (y[0] + y[-1]) + np.sum(y[1:-1])
     return h * s
 
-# Streamlit sliders untuk fungsi sin(t)
-x = st.slider('Pilih rentang untuk sin(t)', 0.0, 2.0, (.2, .5))
+# Slider untuk memilih rentang t untuk sin(t)
+x = st.slider('Pilih rentang untuk sin(t)', 0.0, 2.0, (.2, .5), key='sin_range')
 st.write('Nilai x:', x)
-y = st.slider('Set nilai untuk sin(t)', 0.0, 10.0, 6.0)
+y = st.slider('Set nilai untuk sin(t)', 0.0, 10.0, 6.0, key='sin_value')
 st.write('Nilai y:', y)
 
 t = np.linspace(x[0]*np.pi, x[1]*np.pi, 100)
@@ -76,19 +76,27 @@ ax.set_xlabel("t")
 plt.grid(color='green', linestyle='-.', linewidth=.5)
 st.pyplot(fig)
 
-# Streamlit sliders untuk fungsi polinomial
-x_range = st.slider('Pilih rentang untuk fungsi polinomial', -10, 10, (2, 5))
+# Slider untuk memilih rentang x untuk fungsi polinomial
+x_range = st.slider('Pilih rentang untuk fungsi polinomial', -10, 10, (2, 5), key='poly_range')
 st.write('Nilai x:', x_range)
 
 t = np.linspace(x_range[0], x_range[1], 100)
 u = f(t)
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(t, u, label='f(x) = 19x^2 + 25x - 5', color='b')
+
+# Slider untuk memilih rentang untuk integral fungsi polinomial
+integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0), key='integral_range')
+integral_result = trapezoidal_rule(f, integral_range[0], integral_range[1])
+
+# Tambahkan arsiran untuk area di bawah kurva pada rentang integral
+t_fill = np.linspace(integral_range[0], integral_range[1], 100)
+u_fill = f(t_fill)
+ax.fill_between(t_fill, 0, u_fill, color='skyblue', alpha=0.4)
+
 ax.set_xlabel("t")
 plt.grid(color='green', linestyle='-.', linewidth=.5)
 st.pyplot(fig)
 
-# Integral menggunakan metode trapesium
-integral_range = st.slider('Pilih rentang untuk integral fungsi polinomial', -10.0, 10.0, (1.0, 3.0))
-integral_result = trapezoidal_rule(f, integral_range[0], integral_range[1])
 st.write(f"Hasil integral dari fungsi polinomial pada rentang {integral_range} adalah: {integral_result}")
+
