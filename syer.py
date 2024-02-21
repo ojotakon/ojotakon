@@ -27,7 +27,7 @@ def f(x):
   c = 5
   return a*x+b*x-c
 
-x = st.slider('Pilih rentang', -10, 10, (.2, .5))
+x = st.slider('Pilih rentang', -10, 10, (2, 5))
 st.write('nilai x:', x)
 
 t = np.linspace (x[0], x[1], 100)
