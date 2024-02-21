@@ -45,7 +45,6 @@ st.pyplot(fig)
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import simps
 
 # Fungsi yang akan diintegrasikan
 def f(x):
