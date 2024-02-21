@@ -26,7 +26,11 @@ def f(x):
   b = 25
   c = 5
   return a*x+b*x-c
-  
+
+x = st.slider('Pilih rentang', -10, 10, (.2, .5))
+st.write('nilai x:', x)
+
+t = np.linspace (x[0], x[1], 100)
 u = f(t)
 fig, ax = plt.subplots(figsize=(16, 8))
 ax.plot(t, u, label='sin(t)', color='b')
