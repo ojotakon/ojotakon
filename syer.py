@@ -25,7 +25,7 @@ def f(x):
   a = 19
   b = 25
   c = 5
-  return a*x+b*x-c
+  return a*x*x+b*x-c
 
 x = st.slider('Pilih rentang', -10, 10, (2, 5))
 st.write('nilai x:', x)
