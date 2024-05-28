@@ -14,6 +14,57 @@ df.head()
 
 df.info()
 
+# streamlit
+st.title('Depression Prediction')
+st.write('Fill this form as your current condition')
+st.write('')
+
+# widget input untuk data baru
+new_age = st.number_input('**Age**', value=0, min_value=0, max_value=4)
+st.write('25-30 tahun:0')
+st.write('30-35 tahun:1')
+st.write('35-40 tahun:2')
+st.write('40-50 tahun:3')
+st.write('50-55 tahun:4')
+st.wrtie('')
+st.write('')
+
+new_irritable_towards_people = st.number_input('**Irritable towards people**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Sometimes= 2')
+st.wrtie('')
+st.write('')
+
+new_trouble_sleeping_at_night = st.number_input('**Trouble sleeping at night**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Two or more days a week= 2')
+st.wrtie('')
+st.write('')
+
+new_problems_concentrating_or_making_decision = st.number_input('**Problems concentrating or making decision**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Often= 2')
+st.wrtie('')
+st.write('')
+
+new_loss_of_appetite = st.number_input('**Loss of appetite**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Not at all= 2')
+st.wrtie('')
+st.write('')
+
+new_feeling_of_guilt = st.number_input('**Feeling of guilt**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Maybe= 2')
+st.wrtie('')
+st.write('')
+
+new_problems_of_bonding_with_people = st.number_input('**Problems of bonding with people**, value= 0, min_value= 0, max_value= 2')
+st.write('Yes: 1 | No: 0 | Sometimes= 2')
+st.wrtie('')
+st.write('')
+
+new_suicide_attempt = st.number_input('**Suicide attempt**', value=0, min_value=0, max_value=2)
+st.write('Yes: 1 | No: 0 | Not interested to say: 2')
+st.write('')
+st.write('')
+
+prediksi =  st.button('Predict')
 # split the data into features (X) and variable (Y)
 X = df.drop(columns=['Depressed','Timestamp'])
 X['Age'] = X['Age'].map({'25-30':0, '30-35':1, '35-40':2, '40-45':3, '45-50':4})
@@ -61,14 +112,14 @@ model.fit(X_train, y_train, epochs=50, batch_size=64, validation_data=(X_test, y
 
 # Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test, verbose=0)
-print(f"Test Accuracy: {accuracy}")
 
 df.head()
 
 # data baru
 import numpy as np
-new_data = np.array([[35, 1, 1, 1, 1, 0, 2, 0, 0]])
-new_data_scaled = scaler.transform(new_data)
+If prediksi:
+    new_data = np.array([[new_age, new_feeling_sad, new_irritable_towards_people, new_trouble_sleeping_at_night, new_problems_concentrating_or_making_decision, new_feeling_of_guilt, new_problem_of_bonding_with_people, new_suicide_attempt]])
+    new_data_scaled = scaler.transform(new_data)
 
 # prediksi menggunakan model yang dilatih
 predictions = model.predict(new_data_scaled)
@@ -76,16 +127,8 @@ predictions = model.predict(new_data_scaled)
 #konversi ke new data menggunakan threshold (0.5)
 binary_predictions = (predictions > 0.5).astype (int)
 
-#
-print(f"Predicted Probability: {predictions[0][0]}")
-print(f"Binary Prediction: {binary_predictions[0][0]}")
-print()
-
 if (binary_predictions==0):
-    print("No...")
+    st.write("Congrats, You are not deppresed")
 else:
-    print("Yes")
+    st.write("You are depressed")
 
-print()
-
-#!pip install streamlit
