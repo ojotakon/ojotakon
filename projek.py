@@ -31,32 +31,32 @@ st.write('')
 
 new_irritable_towards_people = st.number_input('**Irritable towards people**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Sometimes= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_trouble_sleeping_at_night = st.number_input('**Trouble sleeping at night**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Two or more days a week= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_problems_concentrating_or_making_decision = st.number_input('**Problems concentrating or making decision**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Often= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_loss_of_appetite = st.number_input('**Loss of appetite**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Not at all= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_feeling_of_guilt = st.number_input('**Feeling of guilt**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Maybe= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_problems_of_bonding_with_people = st.number_input('**Problems of bonding with people**, value= 0, min_value= 0, max_value= 2')
 st.write('Yes: 1 | No: 0 | Sometimes= 2')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_suicide_attempt = st.number_input('**Suicide attempt**', value=0, min_value=0, max_value=2)
