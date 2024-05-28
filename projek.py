@@ -26,7 +26,7 @@ st.write('30-35 tahun:1')
 st.write('35-40 tahun:2')
 st.write('40-50 tahun:3')
 st.write('50-55 tahun:4')
-st.wrtie('')
+st.write('')
 st.write('')
 
 new_irritable_towards_people = st.number_input('**Irritable towards people**, value= 0, min_value= 0, max_value= 2')
