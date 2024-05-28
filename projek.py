@@ -117,18 +117,18 @@ df.head()
 
 # data baru
 import numpy as np
-If prediksi:
+if prediksi:
     new_data = np.array([[new_age, new_feeling_sad, new_irritable_towards_people, new_trouble_sleeping_at_night, new_problems_concentrating_or_making_decision, new_feeling_of_guilt, new_problem_of_bonding_with_people, new_suicide_attempt]])
     new_data_scaled = scaler.transform(new_data)
 
 # prediksi menggunakan model yang dilatih
-predictions = model.predict(new_data_scaled)
+    predictions = model.predict(new_data_scaled)
 
 #konversi ke new data menggunakan threshold (0.5)
-binary_predictions = (predictions > 0.5).astype (int)
+    binary_predictions = (predictions > 0.5).astype (int)
 
-if (binary_predictions==0):
-    st.write("Congrats, You are not deppresed")
-else:
-    st.write("You are depressed")
+    if (binary_predictions==0):
+        st.write("Congrats, You are not deppresed")
+    else:
+        st.write("You are depressed")
 
