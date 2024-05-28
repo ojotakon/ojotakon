@@ -118,7 +118,7 @@ df.head()
 # data baru
 import numpy as np
 if prediksi:
-    new_data = np.array([[new_age, new_feeling_sad, new_irritable_towards_people, new_trouble_sleeping_at_night, new_problems_concentrating_or_making_decision, new_feeling_of_guilt, new_problems_of_bonding_with_people, new_suicide_attempt]])
+    new_data = np.array([[new_age, new_feeling_sad, new_irritable_towards_people, new_trouble_sleeping_at_night, new_problems_concentrating_or_making_decision, new_loss_of_appetite, new_feeling_of_guilt, new_problems_of_bonding_with_people, new_suicide_attempt]])
     new_data_scaled = scaler.transform(new_data)
 
 # prediksi menggunakan model yang dilatih
