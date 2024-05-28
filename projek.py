@@ -29,6 +29,11 @@ st.write('50-55 tahun:4')
 st.write('')
 st.write('')
 
+new_feeling_sad = st.number_input('**feeling_sad**', value= 0, min_value= 0, max_value= 2)
+st.write('Yes: 1 | No: 0 | Sometimes= 2')
+st.write('')
+st.write('')
+
 new_irritable_towards_people = st.number_input('**Irritable towards people**', value= 0, min_value= 0, max_value= 2)
 st.write('Yes: 1 | No: 0 | Sometimes= 2')
 st.write('')
